@@ -1,4 +1,5 @@
 # OSprogramming
+___________________******************Fork****************___________________
 Some OS topics fork,exec etc codes.
 Q1)Considering name e.g Khajasta Zainab  draw a binary tree on paper according to the
 given implications.      (SOLUTION IN FILE NAMEBINARYTREE.CPP)
@@ -53,4 +54,82 @@ You have to create child of child’s as given below process tree for each task 
 each child exec with the image of program of particular task. Print the string after
 each operation.
 
+_________*************** Pipes *****************_______________
+
+
+Q1)Write a program that find frequent item-set of grocery store data. You program will take
+data file as command line argument.  (SOLUTION FILE GROCERYFREQ.CPP)
+Format and Sample of Data File:
+0.5
+6
+Paratha, Makhan, Anda, Sharbat
+Paratha, Makhan, Sharbat
+Paratha, Doodh, Dahi
+Paratha, Sharbat, Doodh
+Makhan, Sharbat, Doodh
+Paratha, Anda, Makhan, Sharbat
+
+In this sample data file o.5 is support threshold, 6 is no of transactions and the remaining
+are transactions.
+Step 1: [5 marks]
+Create child1 using fork in parent
+
+After fork Parent process read the file and store the data. Evaluate the value of
+threshold = support threshold x no of transactions.
+For given example threshold = 0.5 x 6 => 3
+Now parent process send value of threshold and all the transactions to the child1 using
+unnamed pipe.
+Step 2: [5 marks]
+Child1 have to find the frequency of all the items as shown in below table and print it on
+terminal.
+
+Items Frequency
+Paratha 5
+Makhan 4
+Anda 2
+Sharbat 5
+Doodh 3
+Dahi 1
+
+After that remove the items that have frequency less than threshold value and print it
+on terminal.
+
+Items Frequency
+Paratha 5
+Sharbat 5
+Makhan 4
+Doodh 3
+
+Now Child1 creates Child2 and send the above items and their frequencies, andtransactions to Child2 using unnamed pipe.
+
+Step 3: [5 marks]
+Child2 find 2-item pair frequencies and print it on terminal as shown below.
+
+Items Frequency
+Paratha, Makhan 3
+Paratha, Sharbat 4
+Paratha, Doodh 2
+Makhan, Sharbat 4
+Makhan, Doodh 1
+Sharbat, Doodh 2
+
+After that remove the items that have frequency less than threshold value and print it
+on terminal.
+Item Frequen
+cy
+Paratha, Sharbat 4
+Paratha, Makhan 3
+Makhan, Sharbat 3
+
+Now Child2 creates Child3 and send the above items and their frequencies, and
+transactions to Child3 using unnamed pipe.
+
+Q2)Write two different programs P1 and P2 that will connect through a pipe and chat with
+one another. P1 process will take the total and obtained marks of all the assessments of
+OS Lab shown from user and send this data to P2. P2 process will calculate the absolutes
+marks of each assessment, calculate total absolutes and calculate the grade using absolute
+grading policy of Fast. Also print these on terminal.  (SOLUTION FILES READING.CPP WRITING.CPP)
+
+Q3)grep a *.* | sort | sum | wc
+Write a code for the above commands using unnamed pipe and dup. (SOLUTION FILE COMMANDS.CPP)
 
