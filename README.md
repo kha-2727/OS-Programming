@@ -1,7 +1,7 @@
 # OSprogramming
 Some OS topics fork,exec etc codes.
 Q1)Considering name e.g Khajasta Zainab  draw a binary tree on paper according to the
-given implications.
+given implications.      (SOLUTION IN FILE NAMEBINARYTREE.CPP)
 Tree will be of your full name, using upper case alphabet. Less character will be
 moved to left, greater and equal will be drawn on right side. If your name is
 composed of three names first, middle and last just take your middle and last
@@ -10,7 +10,7 @@ Part 2:
 Write a C/C++ program in Linux platform of your full name as refers to the
 generated tree in PART 1.
 Each node has to display its parent id, child id, letter and ASCII value.
-e.g. Node H: “PPID: 1223, PID: 1234 and ASCII: 072”
+e.g. Node H: “PPID: 1223, PID: 1234 and ASCII: 072”     
 
 Each child will return its character with value as ASCII to the parent. All the
 parent node will add the child letter in its display statement.
@@ -23,7 +23,7 @@ tree hierarchy from bottom up view.
 
 
 Q2)Write a program that receives one command line argument: the name of a text
-file. Your program will work as follows:
+file. Your program will work as follows:  (SOLUTION IN FILE COMMANDINPUT.CPP)
  Start out by creating a child process.
  The child process calls exec to run cat command with command line
 argument that the parent received.
@@ -39,11 +39,11 @@ terminate also. If the parent gets to this point, it’s because all has gone we
 
 Q3)Write your shell program which take input commands/exe’s from user as your
 shell takes and execute them. Your shell will terminate when user enter “quit”.
-Your shell program should be able to handle arguments of commands/exe’s
+Your shell program should be able to handle arguments of commands/exe’s (SOLUTION IN FILE CAT_WC_COMMAND.CPP)
 
 
 Q4)Write a program which take string from user and you have to do following tasks
-with the string.
+with the string.  (SOLUTION FILES ADD2.CPP, REVERSE.CPP, CAPITAL.CPP, SIZE.CPP , SORT.CPP ,MAINOFALL.CPP)
 1. Reverse
 2. Find Length
 3. Add 2 in the ASCII of each character
@@ -52,3 +52,5 @@ with the string.
 You have to create child of child’s as given below process tree for each task and
 each child exec with the image of program of particular task. Print the string after
 each operation.
+
+
